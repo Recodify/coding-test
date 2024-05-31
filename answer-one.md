@@ -35,19 +35,18 @@ Given the above, there are two possible improved implementations depending on wh
 ### If they do return promises
 
 ```
-    try {
-        const data = await db.getData();
-        data.a = "test";
-        data.b = 1111;
+try {
+    const data = await db.getData();
+    data.a = "test";
+    data.b = 1111;
 
-        await db.processData(data);
-        await db.saveData();
+    await db.processData(data);
+    await db.saveData();
 
-        console.log("finished");
-    } catch (err) {
-        console.log(err);
-    }
-
+    console.log("finished");
+} catch (err) {
+    console.log(err);
+}
 ```
 
 
